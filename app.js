@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const allEmployee =[];
 function Employee (employeeId, fullName, department, level , image ){
@@ -12,27 +12,32 @@ function Employee (employeeId, fullName, department, level , image ){
    
 }
 
+//console.log(allEmployee);
 
  Employee.prototype.salary = function (){
- ( this.level === 'Senior')? this.salary = getRndInteger(1500,2000): 
- (this.level ==='Mid-Senior')? this.salary = getRndInteger(1000,1500):
-this.salary = getRndInteger(500,1000);
+ if( this.level.toLowerCase() === 'senior'){ 
+  this.salary = getRndInteger(1500,2000) ;
+  return this.salary;
+  } else if (this.level.toLowerCase() ==='mid-senior'){
+   this.salary = getRndInteger(1000,1500);
+   return this.salary;
+  } else if (this.level.toLowerCase() ==='junior'){
+  this.salary = getRndInteger(500,1000);
+  return this.salary;
+  }
  }
 
  Employee.prototype.netSalary = function (){
-  this.netSalary = this.salary - (this.salary * 0.075);
-}
-
- for(let i=0; i< allEmployee.length; i++){
-  allEmployee[i].this.salary();
-  allEmployee[i].this.netSalary();
-  allEmployee[i].employeesTable();
+  this.netSalary =Math.floor( this.salary - (this.salary * 0.075));
+  return this.netSalary;
 }
 
 
- Employee.prototype.employeesTable= function(){
-    document.write(`<p>Full name : ${this.fullName}, Salary : ${this.salary()} JD , Net salary : ${this.netSalary()} JD  \n </p>`);
-}
+
+ Employee.prototype.employeesTable = function(){
+  
+  document.write (`<p> Full name : ${this.fullName}, Salary : ${this.salary} JD , Net salary : ${this.netSalary} JD  \n </p>`)
+  }
 
 
 
@@ -40,14 +45,19 @@ function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
- const Ghazi = new Employee ( 1000 ,'Ghazi Samer','Administration','Senior');
- const Lana = new Employee (1001,'Lana Ali','Finance','Senior');
- const Tamara = new Employee ( 1002,'Tamara Ayoub','Marketing','Senior');
- const Safi = new Employee (1003,'Safi Walid','Administration','Mid-Senior');
- const Omar = new Employee (1004,'Omar Zaid','Development','Senior');
- const Rana = new Employee (1005,'Rana Saleh','Development','Junior');
- const Hadi = new Employee (1006,'Hadi Ahmad','Finance','Mid-Senior');
+ const ghaziSamer = new Employee ( 1000 ,'Ghazi Samer','Administration','Senior');
+ const lanaAli = new Employee (1001,'Lana Ali','Finance','Senior');
+ const tamaraAyoub = new Employee ( 1002,'Tamara Ayoub','Marketing','Senior');
+ const safiWalid = new Employee (1003,'Safi Walid','Administration','Mid-Senior');
+ const omarZaid = new Employee (1004,'Omar Zaid','Development','Senior');
+ const ranaSaleh = new Employee (1005,'Rana Saleh','Development','Junior');
+ const hadiAhmad = new Employee (1006,'Hadi Ahmad','Finance','Mid-Senior');
 
 
- 
+ for(let i = 0 ; i < allEmployee.length ; i++ ){
+  allEmployee[i].salary();
+  allEmployee[i].netSalary();
+  allEmployee[i].employeesTable();
+}
+
 
