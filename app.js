@@ -1,14 +1,14 @@
 'use strict'
 
-//const allEmployee =[];
+const allEmployee =[];
 function Employee (employeeId, fullName, department, level , image ){
     this.employeeId = employeeId;
     this.fullName = fullName;
     this.department = department;
     this.level = level;
     this.image = image;
-    console.log(this);
-    //allEmployee.push(this);
+    //console.log(this);
+    allEmployee.push(this);
    
 }
 /*
@@ -33,14 +33,14 @@ Employee.prototype.salary = function (min , max){
    console.log(this.salary);
  }}
 
- /*Employee.prototype.employeesTable= function(){
+ Employee.prototype.employeesTable= function(){
     console.log(`${this.fullName}: ${this.salary} JD`);
     document.write(`<p>${this.fullName}: ${this.salary} JD \n </p>`);
-}*/
+}
 
-/*for(let i=0; i< allEmployee.length; i++){
+for(let i=0; i< allEmployee.length; i++){
     allEmployee[i].employeesTable();
-}*/
+}
 
 
  const Ghazi = new Employee ( 1000 ,'Ghazi Samer','Administration','Senior');
@@ -53,20 +53,21 @@ Employee.prototype.salary = function (min , max){
 
 /*console.log(Employee1);
 console.log(Employee2);*/
+console.log(document);
+document.write("Employee Table");
 
-console.log(`${this.fullName}: ${ Ghazi.salary()}`);
+/*console.log(`${this.fullName}: ${ Ghazi.salary()}`);
 console.log(`${this.fullName}: ${ Lana.salary()}`);
 console.log(`${this.fullName}: ${ Tamara.salary()}`);
 console.log(`${this.fullName}: ${ Safi.salary()}`);
 console.log(`${this.fullName}: ${ Omar.salary()}`);
 console.log(`${this.fullName}: ${ Rana.salary()}`);
-console.log(`${this.fullName}: ${ Hadi.salary()}`);
-document.write("Employee Table");
-document.write(`${this.fullName}: ${ Ghazi.salary()}`);
+console.log(`${this.fullName}: ${ Hadi.salary()}`);*/
+
+/*document.write(`${this.fullName}: ${ Ghazi.salary()}`);
 document.write(`${this.fullName}: ${ Lana.salary()}`);
 document.write(`${this.fullName}: ${ Tamara.salary()}`);
 document.write(`${this.fullName}: ${ Safi.salary()}`);
 document.write(`${this.fullName}: ${ Omar.salary()}`);
 document.write(`${this.fullName}: ${ Rana.salary()}`);
-document.write(`${this.fullName}: ${ Hadi.salary()}`);
-console.log(document);
+document.write(`${this.fullName}: ${ Hadi.salary()}`);*/
