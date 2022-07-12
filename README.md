@@ -1,4 +1,8 @@
 # HR-management-system
 
-##task 09
-**create a constructor to generate an employee object**
+## **Task 09** 
+
+**Create a constructor to generate an employee object**
+
+## **Task 10**
+**Create employee card**
