@@ -50,7 +50,7 @@ function getRndInteger(min, max) {
  const lanaAli = new Employee (1001,'Lana Ali','Finance','Senior','./assets/Lana.jpg' );
  const tamaraAyoub = new Employee ( 1002,'Tamara Ayoub','Marketing','Senior','./assets/Tamara.jpg' );
  const safiWalid = new Employee (1003,'Safi Walid','Administration','Mid-Senior', './assets/Safi.jpg');
- const omarZaid = new Employee (1004,'Omar Zaid','Development','Senior', './assets/Omer.jpg');
+ const omarZaid = new Employee (1004,'Omar Zaid','Development','Senior', './assets/Omar.jpg');
  const ranaSaleh = new Employee (1005,'Rana Saleh','Development','Junior','./assets/Rana.jpg' );
  const hadiAhmad = new Employee (1006,'Hadi Ahmad','Finance','Mid-Senior','./assets/Hadi.jpg' );
 
@@ -72,14 +72,17 @@ Employee.prototype.employeeCard = function() {
     const sect = document.getElementById("senior");
     const divEl = document.createElement('div');
     sect.appendChild(divEl);
-    const node = document.createTextNode (` ${this.image}  ,
-    Name: ${this.fullName} , ID : ${this.employeeId}  ,
+    let image=document.createElement("img");
+    image.src=this.image;
+    divEl.appendChild(image);
+    image.style.width="160px";
+    const node = document.createTextNode (`Name: ${this.fullName} , ID : ${this.employeeId}  ,
     Department : ${this.department} , Level : ${this.level}  , ${this.salary} `);
     divEl.appendChild(node);
 
     divEl.style.margin= '10px';
     divEl.style.backgroundColor = '#F0F8FF';
-    divEl.style.height ='200px';
+    divEl.style.height ='250px';
     divEl.style.width ='200px';
     divEl.style.border ='3px solid #333';
    
@@ -89,18 +92,21 @@ Employee.prototype.employeeCard = function() {
     const sect = document.getElementById("midSenior");
     const divEl = document.createElement('div');
     sect.appendChild(divEl);
-    const node = document.createTextNode(` ${this.image} , 
-    Name: ${this.fullName} , ID : ${this.employeeId}  ,
+    let image=document.createElement("img");
+    image.src=this.image;
+    divEl.appendChild(image);
+    image.style.width="160px";
+    const node = document.createTextNode(` Name: ${this.fullName} , ID : ${this.employeeId}  ,
     Department : ${this.department} , Level : ${this.level} ,  ${this.salary}  `);
     divEl.appendChild(node);
     
 
     divEl.style.margin= '10px';
     divEl.style.backgroundColor = '#F0F8FF';
-    divEl.style.height ='200px';
+    divEl.style.height ='250px';
     divEl.style.width ='200px';
     divEl.style.border =' 3px solid #333';
-
+    
   
 
     } else if (this.level.toLowerCase() ==='junior'){
@@ -108,15 +114,18 @@ Employee.prototype.employeeCard = function() {
       const sect = document.getElementById("junior");
       const divEl = document.createElement('div');
       sect.appendChild(divEl);
-      const node = document.createTextNode(` ${this.image} ,   
-      Name: ${this.fullName} , ID : ${this.employeeId}  ,
+      let image=document.createElement("img");
+      image.src=this.image;
+      divEl.appendChild(image);
+      image.style.width="160px";
+      const node = document.createTextNode(` Name: ${this.fullName} , ID : ${this.employeeId}  ,
       Department : ${this.department} , Level : ${this.level}  , ${this.salary}  `);
       divEl.appendChild(node);
 
-      divEl.style.display='flex';
+      
       divEl.style.margin= '10px';
       divEl.style.backgroundColor = '#F0F8FF';
-      divEl.style.height ='200px';
+      divEl.style.height ='250px';
       divEl.style.width ='200px';
       divEl.style.border = '3px solid #333';
     
