@@ -84,8 +84,10 @@ Employee.prototype.employeeCard = function() {
     divEl.style.backgroundColor = '#F0F8FF';
     divEl.style.height ='250px';
     divEl.style.width ='200px';
-    divEl.style.border ='3px solid #333';
-   
+    divEl.style.border ='5px solid #333';
+    divEl.style.boxshadow = ' 0 4px 8px 0 rgba(0,0,0,0.2)';
+    divEl.style.transition ='0.3s';
+    
 
     } else if (this.level.toLowerCase() ==='mid-senior'){
 
@@ -106,7 +108,8 @@ Employee.prototype.employeeCard = function() {
     divEl.style.height ='250px';
     divEl.style.width ='200px';
     divEl.style.border =' 3px solid #333';
-    
+    divEl.style.boxshadow = ' 0 4px 8px 0 rgba(0,0,0,0.2)';
+    divEl.style.transition ='0.3s';
   
 
     } else if (this.level.toLowerCase() ==='junior'){
@@ -128,7 +131,8 @@ Employee.prototype.employeeCard = function() {
       divEl.style.height ='250px';
       divEl.style.width ='200px';
       divEl.style.border = '3px solid #333';
-    
+      divEl.style.boxshadow = ' 0 4px 8px 0 rgba(0,0,0,0.2)';
+      divEl.style.transition ='0.3s';
     
     }
  
