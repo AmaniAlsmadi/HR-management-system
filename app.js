@@ -58,7 +58,7 @@ function getRndInteger(min, max) {
  for(let i = 0 ; i < allEmployee.length ; i++ ){
   allEmployee[i].salary();
   allEmployee[i].netSalary();
-  allEmployee[i].employeesTable();
+  //allEmployee[i].employeesTable();
 }
 
  //task10
